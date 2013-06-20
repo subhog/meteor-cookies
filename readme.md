@@ -36,6 +36,8 @@ Sets value of a named cookie.
 - clear
 
 
+If `clear` parameter is set, cookie is immediately removed.
+
 
 
     Cookie.clear(name)
