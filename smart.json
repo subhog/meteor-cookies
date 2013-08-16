@@ -3,7 +3,7 @@
   "description": "Basic cookies support for client",
   "homepage": "https://github.com/subhog/meteor-cookies",
   "author": "Hubert Orlik Grzesik",
-  "version": "0.1.2",
+  "version": "0.3.0",
   "git": "https://github.com/subhog/meteor-cookies.git",
   "packages": {}
 }
