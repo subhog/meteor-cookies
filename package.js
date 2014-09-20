@@ -1,11 +1,14 @@
 Package.describe({
-  summary: "Basic cookies support for client"
+  summary: "Basic cookies support for client",
+  version: "0.4.0",
+  git: "https://github.com/subhog/meteor-cookies.git"
 });
 
-Package.on_use(function (api, where) {
-  if(api.export) {
-    api.use('deps', 'client');
-    api.export('Cookie', 'client');
-  }
-  api.add_files('cookie.js', 'client');
+Package.onUse(function (api) {
+  api.versionsFrom('METEOR@0.9.2.2');
+
+  api.use('tracker', 'client');
+  api.addFiles('cookie.js', 'client');
+  api.export('Cookie', 'client');
+  
 });
