@@ -1,14 +1,14 @@
 Cookie = {};
 
 Cookie._deps = {};
-Cookie._dep = new Deps.Dependency();
+Cookie._dep = new Tracker.Dependency();
 
 
 
 Cookie.get = function(name) {
   var _dep = Cookie._deps[name];
   if(!_dep) {
-    Cookie._deps[name] = new Deps.Dependency();
+    Cookie._deps[name] = new Tracker.Dependency();
     _dep = Cookie._deps[name];
   }
   _dep.depend();
@@ -47,7 +47,7 @@ Cookie.set = function(name, value, duration) {
 
   var _dep = Cookie._deps[name];
   if(!_dep) {
-    Cookie._deps[name] = new Deps.Dependency();
+    Cookie._deps[name] = new Tracker.Dependency();
     _dep = Cookie._deps[name];
   }
   _dep.changed();
